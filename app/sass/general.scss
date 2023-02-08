@@ -1,1 +1,30 @@
-@import "../../node_modules/bootstrap/scss/bootstrap";
+@import "./bootstrap.scss";
+@import "./utilites/color-utilite.scss";
+@import "./variables.scss";
+@import "./components/header.scss";
+
+* {
+    margin: 0;
+    padding: 0;
+
+    border: 0;
+    outline: 0;
+
+    box-sizing: border-box;
+}
+
+.wrapper {
+    border: 1px $border-base solid;
+    border-radius: $border-radius-base;
+}
+
+.p-t-3 {
+    padding-top: 3rem;
+}
+
+.p-horizont-leftSide {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+}
+
+

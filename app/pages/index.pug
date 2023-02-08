@@ -7,7 +7,7 @@ html(lang="en")
         title Chat
         link(rel='stylesheet' href='./app.css')
     body 
-    h1 welcome
-    h2 home
-    .btn.btn-primary open
-        
+        .container.vh-100.overflow-hidden.row.position-relative.m-auto.wrapper
+            include components/header.pug
+            include components/leftSide/index.pug
+            include components/rightSide/index.pug        
