@@ -2,6 +2,9 @@
 @import "./utilites/color-utilite.scss";
 @import "./variables.scss";
 @import "./components/header.scss";
+@import "./components/contacts.scss";
+@import "./components/avatar.scss";
+@import "fonts";
 
 * {
     margin: 0;
@@ -13,18 +16,19 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: 16px;
+    font-family: $regular;
+  }
+
+
+
+a {
+    text-decoration: none;
+}
+
 .wrapper {
     border: 1px $border-base solid;
     border-radius: $border-radius-base;
 }
-
-.p-t-3 {
-    padding-top: 3rem;
-}
-
-.p-horizont-leftSide {
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
-}
-
 

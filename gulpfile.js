@@ -32,6 +32,16 @@ const buildPug = () => {
         .pipe(dest('build/'));
 };
 
+const addAssets = () => {
+    return src('app/images/**')
+            .pipe(dest('build/images/'));
+};
+
+const addFonts = () => {
+    return src('app/fonts/**')
+            .pipe(dest('build/fonts/'));
+};
+
 exports.server = browserSyncJob;
-exports.build = parallel(buildSass, buildPug);
-exports.development = series(buildPug, buildSass, browserSyncJob);
+exports.build = parallel(buildSass, buildPug, addAssets, addFonts);
+exports.development = series(buildPug, buildSass, addAssets, addFonts, browserSyncJob);

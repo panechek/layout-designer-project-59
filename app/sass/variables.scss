@@ -12,5 +12,9 @@ $theme-colors: (
     "dark": #343A40
 );
 
+$bold: "Roboto Bold";
+$regular: "Roboto Regular";
+$medium: "Roboto Medium";
+
 $border-base: map.get($theme-colors, "gray");
 $border-radius-base: 1rem;
