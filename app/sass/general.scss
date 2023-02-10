@@ -4,6 +4,7 @@
 @import "./components/header.scss";
 @import "./components/contacts.scss";
 @import "./components/avatar.scss";
+@import "./components/left.scss";
 @import "fonts";
 
 * {
@@ -16,11 +17,10 @@
     box-sizing: border-box;
 }
 
-html {
+body {
     font-size: 16px;
     font-family: $regular;
-  }
-
+}
 
 
 a {
@@ -29,6 +29,11 @@ a {
 
 .wrapper {
     border: 1px $border-base solid;
-    border-radius: $border-radius-base;
+
+    @media (min-width: 576px) {
+        border-radius: $border-radius-base;
+    }
 }
+
+
 
