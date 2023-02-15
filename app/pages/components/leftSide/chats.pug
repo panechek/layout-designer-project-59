@@ -1,0 +1,57 @@
+include search.pug
+
+-
+  var chat = [
+    {
+      name: "Вениамин Редакторович",
+      status: "Онлайн",
+      avatar: "/images/avatar_4.jpg",
+      messages: [
+        {
+            id: 1,
+            chatID: 2,
+            text: "o_O",
+            time: "11:45",
+        },
+      ]
+    },
+    {
+      name: "Джедай Падаванов",
+      status: "Был онлайн вчера",
+      avatar: "/images/avatar_2.jpg",
+      messages: [
+        {
+            id: 1,
+            chatID: 3,
+            text: "Привет, скоро третий проект? Уже скоро надо будет выложить",
+            time: "10:12",
+        },
+      ]
+    }, 
+    {
+      name: "Алексей Примадонин",
+      status: "Онлайн",
+      avatar: "/images/avatar_3.jpg",
+      messages: [
+        {
+            id: 1,
+            chatID: 1,
+            text: "Тесты уехали >_<",
+            time: "00:53",
+        },
+      ]
+    },
+  ];
+
+div.tab-pane.fade#chats(role="tabpanel" aria-labelledby="chats-tab")
+    h1 Чаты
+    +search("Поиск по сообщениям")
+    each contact in chat 
+        div 
+            a(href="#").mb-3.row.align-items-center.contact.g-0
+                include avatar.pug
+                .col.p-4 
+                    p.fw-bold.text-dark.mb-0= contact.name 
+                    p.small-font-size.text-secondary.text-overflow-ellipsis= contact.messages[0].text
+                .col 
+                    p= contact.messages[0].time

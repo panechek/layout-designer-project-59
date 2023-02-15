@@ -25,11 +25,22 @@ $grid-breakpoints: (
 
 $enable-shadows: true;
 
+
+
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/maps";
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/utilities";
+
+$utilities: map-merge(
+  $utilities, (
+    "rounded": map-merge(
+      map-get($utilities, "rounded"),
+      ( responsive: true ),
+    ),
+  )
+);
 
 // Layout & components
 @import "../../node_modules/bootstrap/scss/root";
@@ -70,3 +81,4 @@ $enable-shadows: true;
 // Utilities
 @import "../../node_modules/bootstrap/scss/utilities/api";
 // scss-docs-end import-stack
+

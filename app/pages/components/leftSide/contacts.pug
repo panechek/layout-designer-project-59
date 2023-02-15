@@ -1,3 +1,5 @@
+include search.pug
+
 -
   var contacts = {
     "A": [{
@@ -35,9 +37,10 @@
       avatar: "/images/avatar_6.jpg"
     }],
   }
-div
+
+div.tab-pane.fade.show.active#contacts(role="tabpanel" aria-labelledby="contacts-tab")
     h1 Контакты
-    input.form-control.input_contacts.p-4.mb-5.mt-4(placeholder="Поиск по контактам")
+    +search("Поиск по контактам")
     each data, letter in contacts  
         div
             p.text-muted.mt-5= letter 

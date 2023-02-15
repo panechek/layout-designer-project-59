@@ -42,6 +42,11 @@ const addFonts = () => {
             .pipe(dest('build/fonts/'));
 };
 
+const addJsBootstrap = () => {
+    return src('node_modules/bootstrap/dist/js/bootstrap.min.js')
+            .pipe(dest('build/'));
+};
+
 exports.server = browserSyncJob;
-exports.build = parallel(buildSass, buildPug, addAssets, addFonts);
-exports.development = series(buildPug, buildSass, addAssets, addFonts, browserSyncJob);
+exports.build = parallel(buildSass, buildPug, addAssets, addFonts, addJsBootstrap);
+exports.development = series(buildPug, buildSass, addAssets, addFonts, addJsBootstrap, browserSyncJob);
