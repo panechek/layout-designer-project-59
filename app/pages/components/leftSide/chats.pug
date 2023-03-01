@@ -44,14 +44,15 @@ include search.pug
   ];
 
 div.tab-pane.fade#chats(role="tabpanel" aria-labelledby="chats-tab")
-    h1 Чаты
+    h1.fw-bold Чаты
     +search("Поиск по сообщениям")
     each contact in chat 
         div 
-            a(href="#").mb-3.row.align-items-center.contact.g-0
+            a(href="#").mb-3.d-flex.align-items-center.contact.g-0.link-primary
                 include avatar.pug
-                .col.p-4 
-                    p.fw-bold.text-dark.mb-0= contact.name 
-                    p.small-font-size.text-secondary.text-overflow-ellipsis= contact.messages[0].text
-                .col 
-                    p= contact.messages[0].time
+                .p-4 
+                    .d-flex.justify-content-between
+                        p.fw-bold.text-dark.mb-0= contact.name 
+                        p.text-muted.small= contact.messages[0].time
+                    p.small.text-secondary.text-overflow-ellipsis= contact.messages[0].text
+                   
