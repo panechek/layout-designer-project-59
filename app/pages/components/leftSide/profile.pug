@@ -1,0 +1,33 @@
+div.tab-pane.fade.show#profile(role="tabpanel" aria-labelledby="profile-tab")
+    h1.fw-bold Профиль
+    +search("Поиск по сообщениям")
+    .card.border.border-0.align-items-center.mb-5
+        img(src="/images/avatar_1.jpg", alt="avatar").avatar
+        .card-body.text-center.mb-2
+            h5.card-title.mb-2 Кодовёнок Хекслетович
+            p.card-text.text-muted Милый и скромный помощник начинающих разработчиков. Люблю JavaScript
+    ul.list-group.mt-5
+        li.list-group-item.border.border-0.border-bottom
+            .d-flex.justify-content-between
+                div
+                    p.small.text-muted Страна
+                    p.small.text-dark Москва, Россия
+                include ../../../images/icons/earth.svg
+        li.list-group-item.border.border-0.border-bottom
+            .d-flex.justify-content-between 
+                div
+                    p.small.text-muted Телефон
+                    p.small.text-dark +7 (499) 123-45-67
+                include ../../../images/icons/telephone.svg
+        li.list-group-item.border.border-0.border-bottom
+            .d-flex.justify-content-between 
+                div
+                    p.small.text-muted Email
+                    p.small.text-dark nikita.m@hexlet.io
+                include ../../../images/icons/mail.svg
+        li.list-group-item.border.border-0.border-bottom
+            .d-flex.justify-content-between 
+                div
+                    p.small.text-muted Twitter
+                    p.small.text-dark @n_mikhaylov
+                include ../../../images/icons/men.svg

@@ -48,11 +48,11 @@ div.tab-pane.fade#chats(role="tabpanel" aria-labelledby="chats-tab")
     +search("Поиск по сообщениям")
     each contact in chat 
         div 
-            a(href="#").mb-3.d-flex.align-items-center.contact.g-0.link-primary
+            a(href="#").mb-3.d-flex.align-items-center.contact.g-0.link-left
                 include avatar.pug
-                .p-4 
+                .p-4.flex-grow-1.text-truncate
                     .d-flex.justify-content-between
-                        p.fw-bold.text-dark.mb-0= contact.name 
+                        p.fw-bold.text-dark= contact.name 
                         p.text-muted.small= contact.messages[0].time
-                    p.small.text-secondary.text-overflow-ellipsis= contact.messages[0].text
+                    p.small.text-secondary.text-truncate= contact.messages[0].text
                    

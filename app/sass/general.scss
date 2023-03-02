@@ -29,6 +29,10 @@ a {
     text-decoration: none;
 }
 
+p {
+    margin: 0;
+}
+
 .text-overflow-ellipsis {
     white-space: nowrap;
     overflow: hidden;
@@ -51,6 +55,7 @@ a {
 .logo {
     height: 40px;
     width: 25px;
+    align-self: center;
 }
 
 
