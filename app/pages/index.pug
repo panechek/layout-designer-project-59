@@ -1,16 +1,16 @@
+- const url = 'main';
+
 doctype html
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Chat
-        link(rel='stylesheet' href='./app.css')
-        script(src="./bootstrap.min.js") 
+    include components/head.pug
     body.h-100 
         .container.vh-100.bg-gray.p-0.p-md-4
             .overflow-hidden.row.mx-0.rounded-0.rounded-md-4.bg-white.h-100
                 .h-100.p-0.leftside.d-flex.flex-column.col-12.col-md-7.col-lg-6.col-xl-5.col-xxl-4
                     include components/header.pug
-                    include components/leftSide/index.pug
-                include components/rightSide/index.pug   
+                    .h-100.px-4.pt-5.hide_scroll.tab-content#myTabContent.order-1.order-sm-2
+                        include components/contacts.pug
+                        include components/chats.pug
+                        include components/profile.pug
+                .h-100.pt-3.px-1.col-md-5.col-lg-6.col-xl-7.col-xxl-8
+                    include components/started.pug

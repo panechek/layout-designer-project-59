@@ -1,20 +1,36 @@
 @use "sass:map";
 
-$theme-colors: (
-    "gray": #EFEFEF,
-    "primary": #4545A5,
-    "secondary": #6C757D,
-    "success": #28A745,
-    "info": #17A2B8,
-    "warning": #FFC107,
-    "danger": #DC3545,
-    "light": #FBFBFB,
-    "dark": #343A40
-);
+$primary:       #4545A5;
+$secondary:     #6C757D;
+$success:       #28A745;
+$info:          #17A2B8;
+$warning:       #FFC107;
+$danger:        #DC3545;
+$light:         #FBFBFB;
+$dark:          #343A40;
+
+// $custom-colors: (
+//   "gray": #EFEFEF
+// );
+
+// // Merge the maps
+// $theme-colors: map-merge($theme-colors, $custom-colors);
+
+// $theme-colors: (
+//     "gray": #EFEFEF,
+//     "primary": #4545A5,
+//     "secondary": #6C757D,
+//     "success": #28A745,
+//     "info": #17A2B8,
+//     "warning": #FFC107,
+//     "danger": #DC3545,
+//     "light": #FBFBFB,
+//     "dark": #343A40
+// );
 
 $bold: "Roboto Bold";
 $regular: "Roboto Regular";
 $medium: "Roboto Medium";
 
-$border-base: map.get($theme-colors, "gray");
-$border-radius-base: 1rem;
+// $border-base: map.get($theme-colors, "gray");
+// $border-radius-base: 1rem;

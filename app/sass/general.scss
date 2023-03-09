@@ -1,12 +1,12 @@
 @use "sass:map";
 
+@import "./variables.scss";
 @import "./bootstrap.scss";
 @import "./utilites/color-utilite.scss";
-@import "./variables.scss";
+
 @import "./components/header.scss";
 @import "./components/contacts.scss";
 @import "./components/avatar.scss";
-@import "./components/left.scss";
 @import "fonts";
 
 * {
@@ -58,6 +58,20 @@ p {
     align-self: center;
 }
 
+.leftside {
+    border-right: 1px $gray solid;
+    max-width: 464px;
+}
+
+.input_search {
+    box-shadow: none;
+    border: none;
+    border-bottom: 1px $gray solid;
+}
+
+.message-width {
+    max-width: 510px;
+}
 
 
 

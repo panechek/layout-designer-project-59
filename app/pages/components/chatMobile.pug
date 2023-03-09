@@ -1,0 +1,22 @@
+div.tab-pane.fade.h-100.show#current-chat(role="tabpanel" aria-labelledby="current-chat-tab")
+    .sticky-top.bg-white
+        include chatHeader.pug
+    .h-100.d-flex.flex-column
+        each message in messages
+            if message.author
+                .d-flex.align-items-end.mb-3 
+                    img(src=message.author.avatar, alt="").avatar.mb-0
+                    .bg-gray.p-4.radius
+                        p.fw-bold.text-dark.mb-3= message.author.name
+                        p.text-dark.border-bottom.pb-3.message-width= message.text 
+                        p.small.text-dark= message.time
+            else
+                .d-flex.align-items-end.mb-3.align-self-end
+                    img(src="/images/avatar_1.jpg", alt="").avatar.mb-0
+                    .bg-primary.p-4.radius
+                        p.text-light.border-bottom.pb-3.message-width= message.text 
+                        p.small.text-light= message.time
+    .d-flex.py-3.sticky-bottom.bg-white
+        input(type="text" placeholder="Напишите сообщение...").form-control.border-0.input_search
+        button.p-2.bg-primary.radius-2
+            img(src="/images/icons/cursor.svg", alt="").w-4

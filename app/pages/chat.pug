@@ -1,8 +1,59 @@
+- const url = 'chat';
+-
+  var contact = {
+      name: "Вениамин Редакторович",
+      status: "Онлайн",
+      avatar: "/images/avatar_4.jpg"
+  };
+
+-
+    var messages = [
+        {
+            id: 1,
+            author: contact,
+            text: "Да, я уже вышел и минут через 20-30 буду у тебя. Поеду на трамвае и потом в магазин. Тебе что-то захватить?",
+            time: "8 минут назад"
+        },
+        {
+            id: 2,
+            author: false,
+            text: "Захвати мне колы и пару печенек. Как-то очень сладкого хочется, а в магазин идти лень",
+            time: "5 минут назад"
+        },
+        {
+            id: 3,
+            author: contact,
+            text: "Лады",
+            time: "5 минут назад"
+        },
+        {
+            id: 4,
+            author: false,
+            text: "А, слушай, купи мне ещё Macbook Pro. А то хочется работать в Хекслете, а там это условие",
+            time: "3 минуты назад"
+        },
+        {
+            id: 5,
+            author: contact,
+            text: "о_О",
+            time: "Только что"
+        },
+    ];
+
 doctype html
 html(lang="en")
-    head
-        meta(charset="UTF-8")
-        meta(http-equiv="X-UA-Compatible", content="IE=edge")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
-    body 
+    include components/head.pug
+    body.h-100 
+        .container.vh-100.bg-gray.p-0.p-md-4
+            .overflow-hidden.row.mx-0.rounded-0.rounded-md-4.bg-white.h-100
+                .h-100.p-0.leftside.d-flex.flex-column.col-12.col-md-7.col-lg-6.col-xl-5.col-xxl-4
+                    include components/header.pug
+                    .h-100.px-4.pt-5.hide_scroll.tab-content#myTabContent.order-1.order-sm-2.bg-white
+                        include components/contacts.pug
+                        include components/chats.pug
+                        include components/profile.pug
+                        include components/chatMobile.pug
+                .h-100.pt-3.px-1.col-md-5.col-lg-6.col-xl-7.col-xxl-8
+                    include components/chatHeader.pug
+                    include components/chatDesktop.pug
+                    

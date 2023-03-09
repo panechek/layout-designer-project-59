@@ -33,6 +33,15 @@ $enable-shadows: true;
 @import "../../node_modules/bootstrap/scss/mixins";
 @import "../../node_modules/bootstrap/scss/utilities";
 
+$gray: #EFEFEF;
+
+$custom-colors: (
+  "gray": $gray
+);
+
+// Merge the maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
 $utilities: map-merge(
   $utilities, (
     "rounded": map-merge(
@@ -81,7 +90,23 @@ $utilities: map-merge(
       property: border-radius,
       class: radius,
       responsive: true,
-      values: (null: 1rem)
+      values: (
+        null: 1rem,
+        2: 2rem,
+        )
+    ),
+    "width": map-merge(
+      map-get($utilities, "width"),
+      (
+        values: map-merge(
+          map-get(map-get($utilities, "width"), "values"),
+          (
+            3: 1rem,
+            4: 1.5rem,
+            5: 2rem,
+            )
+        ),
+      )
     )
   )
 );

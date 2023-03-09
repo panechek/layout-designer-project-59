@@ -1,0 +1,12 @@
+-
+  var contact = {
+      name: "Вениамин Редакторович",
+      status: "Онлайн",
+      avatar: "/images/avatar_4.jpg"
+  }
+
+div.mb-3.row.align-items-center.contact.g-0
+    include avatar.pug
+    .col.p-4 
+        p.fw-bold.mb-0= contact.name 
+        p.small.text-secondary= contact.status

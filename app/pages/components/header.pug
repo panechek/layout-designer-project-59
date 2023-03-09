@@ -1,24 +1,21 @@
-
 nav.menu.order-2.order-sm-1.d-flex.justify-content-around 
-    //- img(src="./images/icons/logo.svg", alt="")
-    //- p
-    //- 
     .logo   
-        include ../../images/icons/Logo.svg
+        img(src="../../images/icons/Logo.svg", alt="logo")
     ul.nav.align-items-center#myTab(role="tablist").bg-transparent
+        if url == 'chat'
+            li.nav-item(role="presentation").d-sm-none 
+                .nav-link.d-flex.align-items-center#current-chat-tab(data-bs-toggle="tab" data-bs-target=" #current-chat" type="button" role="tab" aria-controls="current-chat" aria-selected="false")
+                    img(src="../../images/icons/chat-left-text.svg", alt="chat").w-4
         li.nav-item(role="presentation") 
             .nav-link.d-flex.align-items-center.active#contacts-tab(data-bs-toggle="tab" data-bs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="true")
-                include ../../images/icons/people.svg
-                //- img(src="../../images/icons/people.svg", alt="people")
-                p.text-light.mb-0.small.ms-2 Контакты
+                img(src="../../images/icons/people.svg", alt="people").w-4
+                p.text-light.mb-0.small.ms-2.d-none.d-sm-block Контакты
         li.nav-item(role="presentation")
             .nav-link.d-flex.align-items-center#chats-tab(data-bs-toggle="tab" data-bs-target="#chats" type="button" role="tab" aria-controls="chats" aria-selected="false")
-                include ../../images/icons/chat.svg
-                //- img(src="../../images/icons/chat.svg", alt="chat")
-                p.text-light.mb-0.small.ms-2 Сообщения 
+                img(src="../../images/icons/chat.svg", alt="chat").w-4
+                p.text-light.mb-0.small.ms-2.d-none.d-sm-block Сообщения 
         li.nav-item(role="presentation") 
             .nav-link.d-flex.align-items-center#profile-tab(data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false")
-                include ../../images/icons/person.svg
-                //- img(src="../../images/icons/person.svg", alt="person")
-                p.text-light.mb-0.small.ms-2 Профиль
+                img(src="../../images/icons/person.svg", alt="person").w-4
+                p.text-light.mb-0.small.ms-2.d-none.d-sm-block Профиль
         
