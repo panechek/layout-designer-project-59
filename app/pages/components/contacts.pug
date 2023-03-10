@@ -43,7 +43,7 @@ div.tab-pane.fade.show.active#contacts(role="tabpanel" aria-labelledby="contacts
     +search("Поиск по контактам")
     each data, letter in contacts  
         div
-            p.text-muted.mt-5= letter 
+            p.text-muted.mt-5.mb-3= letter 
             div
                 each contact in data 
                     include contact.pug
