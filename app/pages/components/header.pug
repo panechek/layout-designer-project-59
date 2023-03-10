@@ -1,10 +1,10 @@
-nav.menu.order-2.order-sm-1.d-flex.justify-content-around 
+nav.menu.order-2.order-sm-1.d-flex.justify-content-sm-around.justify-content-between.px-5.px-sm-0 
     .logo   
         img(src="../../images/icons/Logo.svg", alt="logo")
     ul.nav.align-items-center#myTab(role="tablist").bg-transparent
         if url == 'chat'
             li.nav-item(role="presentation").d-sm-none 
-                .nav-link.d-flex.align-items-center#current-chat-tab(data-bs-toggle="tab" data-bs-target=" #current-chat" role="tab" aria-controls="current-chat" aria-selected="false")
+                .nav-link.d-flex.align-items-center#current-chat-tab(data-bs-toggle="tab" data-bs-target="#current-chat" role="tab" aria-controls="current-chat" aria-selected="false")
                     img(src="../../images/icons/chat-left-text.svg", alt="chat").w-4
         li.nav-item(role="presentation") 
             .nav-link.d-flex.align-items-center.active#contacts-tab(data-bs-toggle="tab" data-bs-target="#contacts" role="tab" aria-controls="contacts" aria-selected="true")
