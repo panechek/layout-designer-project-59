@@ -4,18 +4,18 @@ nav.menu.order-2.order-sm-1.d-flex.justify-content-around
     ul.nav.align-items-center#myTab(role="tablist").bg-transparent
         if url == 'chat'
             li.nav-item(role="presentation").d-sm-none 
-                .nav-link.d-flex.align-items-center#current-chat-tab(data-bs-toggle="tab" data-bs-target=" #current-chat" type="button" role="tab" aria-controls="current-chat" aria-selected="false")
+                .nav-link.d-flex.align-items-center#current-chat-tab(data-bs-toggle="tab" data-bs-target=" #current-chat" role="tab" aria-controls="current-chat" aria-selected="false")
                     img(src="../../images/icons/chat-left-text.svg", alt="chat").w-4
         li.nav-item(role="presentation") 
-            .nav-link.d-flex.align-items-center.active#contacts-tab(data-bs-toggle="tab" data-bs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="true")
+            .nav-link.d-flex.align-items-center.active#contacts-tab(data-bs-toggle="tab" data-bs-target="#contacts" role="tab" aria-controls="contacts" aria-selected="true")
                 img(src="../../images/icons/people.svg", alt="people").w-4
                 p.text-light.mb-0.small.ms-2.d-none.d-sm-block Контакты
         li.nav-item(role="presentation")
-            .nav-link.d-flex.align-items-center#chats-tab(data-bs-toggle="tab" data-bs-target="#chats" type="button" role="tab" aria-controls="chats" aria-selected="false")
+            .nav-link.d-flex.align-items-center#chats-tab(data-bs-toggle="tab" data-bs-target="#chats" role="tab" aria-controls="chats" aria-selected="false")
                 img(src="../../images/icons/chat.svg", alt="chat").w-4
                 p.text-light.mb-0.small.ms-2.d-none.d-sm-block Сообщения 
         li.nav-item(role="presentation") 
-            .nav-link.d-flex.align-items-center#profile-tab(data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false")
+            .nav-link.d-flex.align-items-center#profile-tab(data-bs-toggle="tab" data-bs-target="#profile" role="tab" aria-controls="profile" aria-selected="false")
                 img(src="../../images/icons/person.svg", alt="person").w-4
                 p.text-light.mb-0.small.ms-2.d-none.d-sm-block Профиль
         
