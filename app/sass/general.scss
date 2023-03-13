@@ -33,6 +33,10 @@ p {
     margin: 0;
 }
 
+.left-side {
+    max-width: 464px;
+}
+
 .text-overflow-ellipsis {
     white-space: nowrap;
     overflow: hidden;
