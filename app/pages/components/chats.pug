@@ -43,7 +43,7 @@ include search.pug
     },
   ];
 
-div.tab-pane.fade#chats(role="tabpanel" aria-labelledby="chats-tab")
+div.tab-pane.fade.show#chats(role="tabpanel" aria-labelledby="chats-tab" class={active: url === 'chat'})
     h1.h2.fw-bold Чаты
     +search("Поиск по сообщениям")
     each contact in chat 

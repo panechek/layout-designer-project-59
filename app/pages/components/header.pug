@@ -1,17 +1,19 @@
+- console.log(url);
+
 nav.menu.order-2.order-sm-1.d-flex.justify-content-between.px-3
     .logo   
         img(src="../../images/icons/Logo.svg", alt="logo")
-    ul.nav.align-items-center.flex-grow-1.justify-content-sm-around#myTab(role="tablist")
+    ul.nav.align-items-center.flex-grow-1.justify-content-sm-around.justify-content-end#myTab(role="tablist")
         if url == 'chat'
             li.nav-item(role="presentation").d-sm-none 
                 a.nav-link.bg-transparent.d-flex.align-items-center#current-chat-tab(data-bs-toggle="tab" data-bs-target="#current-chat" role="tab" aria-controls="current-chat" aria-selected="false" href="#current-chat")
                     img(src="../../images/icons/chat-left-text.svg", alt="chat").w-4
         li.nav-item(role="presentation") 
-            a.nav-link.bg-transparent.d-flex.align-items-center.active#contacts-tab(data-bs-toggle="tab" data-bs-target="#contacts" role="tab" aria-controls="contacts" aria-selected="true" href="#contacts-chat")
+            a.nav-link.bg-transparent.d-flex.align-items-center#contacts-tab(data-bs-toggle="tab" data-bs-target="#contacts" role="tab" aria-controls="contacts" aria-selected="true" href="#contacts-chat" class={active: url === 'main'})
                 img(src="../../images/icons/people.svg", alt="people").w-4
                 p.text-light.mb-0.small.ms-2.d-none.d-sm-block Контакты
         li.nav-item(role="presentation")
-            a.nav-link.bg-transparent.d-flex.align-items-center#chats-tab(data-bs-toggle="tab" data-bs-target="#chats" role="tab" aria-controls="chats" aria-selected="false" href="#chats")
+            a.nav-link.bg-transparent.d-flex.align-items-center#chats-tab(data-bs-toggle="tab" data-bs-target="#chats" role="tab" aria-controls="chats" aria-selected="false" href="#chats" class={active: url === 'chat'})
                 img(src="../../images/icons/chat.svg", alt="chat").w-4
                 p.text-light.mb-0.small.ms-2.d-none.d-sm-block Сообщения 
         li.nav-item(role="presentation") 
