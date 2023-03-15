@@ -1,7 +1,7 @@
-div.tab-pane.fade.h-100.show#current-chat(role="tabpanel" aria-labelledby="current-chat-tab")
+div.tab-pane.fade.py-5.h-100.show#current-chat(role="tabpanel" aria-labelledby="current-chat-tab")
     .fixed-top.bg-white
         include chatHeader.pug
-    .h-100.d-flex.flex-column.m-3
+    .h-100.d-flex.flex-column.m-3.my-5
         each message in messages
             if message.author
                 .d-flex.align-items-end.mb-3 
@@ -10,7 +10,7 @@ div.tab-pane.fade.h-100.show#current-chat(role="tabpanel" aria-labelledby="curre
                         p.text-dark.message-width.border-bottom.pb-2= message.text 
                         p.small.text-dark= message.time
             else
-                .d-flex.align-items-end.mb-3.align-self-end
+                .d-flex.align-items-end.mb-3.align-self-end.my-5
                     .bg-primary.p-4.radius
                         p.text-light.message-width.border-bottom.pb-2= message.text 
                         p.small.text-light= message.time
