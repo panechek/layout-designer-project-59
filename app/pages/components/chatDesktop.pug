@@ -5,13 +5,13 @@
                 img(src=message.author.avatar, alt="avatar").avatar.me-3
                 .bg-light.p-4.radius
                     p.fw-bold.text-dark= message.author.name
-                    p.text-dark.message-width.border-bottom.pb-2.mb-1= message.text
+                    p.text-dark.message-width.border-bottom.pb-2.mb-2= message.text
                     p.small.text-dark= message.time
         else
             .d-flex.align-items-end.mb-3.align-self-end
                 img(src="/images/avatar_1.jpg", alt="avatar").avatar.me-3
                 .bg-primary.p-4.radius
-                    p.text-light.message-width.border-bottom.pb-2.mb-1= message.text
+                    p.text-light.message-width.border-bottom.pb-2.mb-2= message.text
                     p.small.text-light= message.time
 
         
