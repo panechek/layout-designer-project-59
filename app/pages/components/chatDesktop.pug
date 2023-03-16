@@ -1,15 +1,15 @@
-.d-flex.flex-column.m-5.hide_scroll.h-100
+.d-flex.flex-column.p-5.hide_scroll.h-100
     each message in messages
         if message.author
             .d-flex.align-items-end.mb-3 
-                img(src=message.author.avatar, alt="avatar").avatar.mb-0.ms-0
+                img(src=message.author.avatar, alt="avatar").avatar.me-3
                 .bg-gray.p-4.radius
                     p.fw-bold.text-dark= message.author.name
                     p.text-dark.message-width.border-bottom.pb-2.mb-1= message.text
                     p.small.text-dark= message.time
         else
             .d-flex.align-items-end.mb-3.align-self-end
-                img(src="/images/avatar_1.jpg", alt="avatar").avatar.mb-0.ms-0
+                img(src="/images/avatar_1.jpg", alt="avatar").avatar.me-3
                 .bg-primary.p-4.radius
                     p.text-light.message-width.border-bottom.pb-2.mb-1= message.text
                     p.small.text-light= message.time

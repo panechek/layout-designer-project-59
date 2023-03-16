@@ -49,7 +49,7 @@ div.tab-pane.fade.show#chats(role="tabpanel" aria-labelledby="chats-tab" class={
     each contact in chat 
         div 
             a(href="chat.html").mb-3.d-flex.align-items-center.contact.g-0.link-left
-                include avatar.pug
+                img(src=contact.avatar, alt="avatar").col-auto.avatar.m-3
                 .p-4.flex-grow-1.text-truncate
                     .d-flex.justify-content-between
                         p.fw-bold.text-dark= contact.name 
