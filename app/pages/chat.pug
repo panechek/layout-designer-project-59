@@ -46,14 +46,14 @@ html(lang="en")
     body.h-100 
         .container-xxl.vh-100.bg-gray.p-0.p-md-4
             .overflow-hidden.row.mx-0.rounded-0.rounded-md-4.bg-white.h-100
-                .h-100.p-0.d-flex.flex-column.col-12.col-md-7.col-lg-6.col-xl-5.col-xxl-4.border-end.left-side
+                .h-100.p-0.d-flex.flex-column.col-12.col-md-7.col-lg-6.col-xl-5.col-xxl-4.left-side
                     include components/header.pug
-                    .h-100.px-4.pt-5.hide_scroll.tab-content#myTabContent.order-1.order-sm-2.bg-white
+                    .h-100.pt-5.hide_scroll.tab-content#myTabContent.order-1.order-sm-2.bg-white
                         include components/contacts.pug
                         include components/chats.pug
                         include components/profile.pug
                         include components/chatMobile.pug
-                .h-100.col.d-flex.flex-column.p-0
+                .h-100.col.d-flex.flex-column.p-0.border-start
                     include components/chatHeader.pug
                     include components/chatDesktop.pug
                     include components/inputMessage.pug

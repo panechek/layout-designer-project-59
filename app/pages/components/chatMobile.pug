@@ -1,7 +1,7 @@
 div.tab-pane.fade.py-5.h-100.show#current-chat(role="tabpanel" aria-labelledby="current-chat-tab")
-    .fixed-top.bg-white
+    .fixed-top.bg-white.left-side
         include chatHeader.pug
-    .h-100.d-flex.flex-column.m-4.pt-4
+    .h-100.d-flex.flex-column.m-4.pt-4.px-4
         each message in messages
             if message.author
                 .d-flex.align-items-end.mb-3 
@@ -14,7 +14,7 @@ div.tab-pane.fade.py-5.h-100.show#current-chat(role="tabpanel" aria-labelledby="
                     .bg-primary.p-4.radius.contact.message-width
                         p.text-white.pb-2.border-bottom= message.text 
                         p.small.text-white.text-muted.mb-0.mt-1= message.time
-    .d-flex.py-3.sticky-bottom.bg-white.mx-n2.border-top
-        input(type="text" placeholder="Напишите сообщение...").form-control.border-0.input_search
+    .d-flex.py-3.sticky-bottom.bg-white.px-3.border-top
+        input(type="text" placeholder="Напишите сообщение...").form-control.border-0.input_search.ms-3
         button.p-2.bg-primary.radius-2
             img(src="/images/icons/cursor.svg", alt="send message").w-4
