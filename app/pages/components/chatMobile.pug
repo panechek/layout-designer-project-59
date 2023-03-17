@@ -7,8 +7,8 @@ div.tab-pane.fade.py-5.h-100.show#current-chat(role="tabpanel" aria-labelledby="
                 .d-flex.align-items-end.mb-3 
                     .bg-light.p-4.radius.contact
                         p.fw-bold.text-dark= message.author.name
-                        p.text-dark.message-width.border-bottom.pb-2.mb-1= message.text 
-                        p.small.text-dark= message.time
+                        p.text-secondary.message-width.border-bottom.pb-2.mb-1= message.text 
+                        p.small.text-secondary.text-muted= message.time
             else
                 .d-flex.align-items-end.mb-3.align-self-end
                     .bg-primary.p-4.radius.contact
