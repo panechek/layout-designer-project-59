@@ -38,7 +38,7 @@ include search.pug
     }],
   }
 
-div.tab-pane.fade.show.px-4#contacts(role="tabpanel" aria-labelledby="contacts-tab" class={active: url === 'main'})
+div.tab-pane.fade.show.px-3#contacts(role="tabpanel" aria-labelledby="contacts-tab" class={active: url === 'main'})
     h1.h2.fw-bold Контакты
     +search("Поиск по контактам")
     each data, letter in contacts  
