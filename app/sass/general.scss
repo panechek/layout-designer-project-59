@@ -68,7 +68,11 @@ p {
 }
 
 .message-width {
-    max-width: 510px;
+    max-width: 558px;
+
+    @media (max-width: 568px) {
+        max-width: 318px;
+    }
 }
 
 .avatar {
