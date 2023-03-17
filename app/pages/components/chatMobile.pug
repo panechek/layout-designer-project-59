@@ -7,13 +7,13 @@ div.tab-pane.fade.py-5.h-100.show#current-chat(role="tabpanel" aria-labelledby="
                 .d-flex.align-items-end.mb-3 
                     .bg-light.p-4.radius.contact
                         p.fw-bold.text-dark= message.author.name
-                        p.text-secondary.message-width.border-bottom.pb-2.mb-1= message.text 
-                        p.small.text-secondary.text-muted= message.time
+                        p.text-secondary.message-width.pb-2= message.text 
+                        p.small.text-secondary.text-muted.border-top.pt-2= message.time
             else
-                .d-flex.align-items-end.mb-3.align-self-end
+                .d-flex.align-items-end.mb-3
                     .bg-primary.p-4.radius.contact
-                        p.text-light.message-width.border-bottom.pb-2.mb-1= message.text 
-                        p.small.text-light= message.time
+                        p.text-light.message-width.pb-2= message.text 
+                        p.small.text-light.text-muted.border-top.pt-2= message.time
     .d-flex.py-3.sticky-bottom.bg-white
         input(type="text" placeholder="Напишите сообщение...").form-control.border-0.input_search
         button.p-2.bg-primary.radius-2
