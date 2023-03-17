@@ -2,7 +2,7 @@ install:
 	npm ci
 
 lint:
-	npx stylelint ./app/scss/**/*.scss
+	npx stylelint ./app/sass/**/*.scss
 
 deploy:
 	npx gulp build
