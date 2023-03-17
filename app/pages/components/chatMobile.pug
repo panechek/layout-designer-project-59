@@ -1,7 +1,7 @@
 div.tab-pane.fade.py-5.h-100.show#current-chat(role="tabpanel" aria-labelledby="current-chat-tab")
     .fixed-top.bg-white
         include chatHeader.pug
-    .h-100.d-flex.flex-column.m-4.pt-4
+    .h-100.d-flex.flex-column.m-5.pt-4
         each message in messages
             if message.author
                 .d-flex.align-items-end.mb-3 
@@ -12,7 +12,7 @@ div.tab-pane.fade.py-5.h-100.show#current-chat(role="tabpanel" aria-labelledby="
             else
                 .d-flex.align-items-end.mb-3
                     .bg-primary.p-4.radius.contact.message-width
-                        p.text-muted.text-white.pb-2.border-bottom= message.text 
+                        p.text-white.pb-2.border-bottom= message.text 
                         p.small.text-light.text-muted.mb-0.mt-1= message.time
     .d-flex.py-3.sticky-bottom.bg-white
         input(type="text" placeholder="Напишите сообщение...").form-control.border-0.input_search
