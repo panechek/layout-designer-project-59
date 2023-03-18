@@ -2,9 +2,9 @@
     & {
       -ms-overflow-style: none;
       scrollbar-width: none;
-  
-      overflow-y: auto;
+
       overflow-x: hidden;
+      overflow-y: auto;
     }
   
     &::-webkit-scrollbar {
@@ -13,10 +13,10 @@
   }
 
 .hide_scroll {
-    @include hide-scrollbar()
+    @include hide-scrollbar;
 }
 
 .contact {
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    box-shadow: 0 0.125rem 0.25rem rgba(0 0 0 / 7.5%);
 }
 
