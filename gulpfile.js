@@ -10,14 +10,14 @@ const browserSyncJob = () => {
         server: "build/"
     });
 
-    watch('app/sass/*.scss', buildSass);
+    watch('app/scss/*.scss', buildSass);
     watch('app/pages/*.pug', buildPug);
 };
 
 const buildSass = () => {
     console.log('Compline SASS to CSS');
 
-    return src('app/sass/*.scss')
+    return src('app/scss/*.scss')
         .pipe(sass({ sourceMap: false }))
         .pipe(cleanCss())
         .pipe(concat('app.css'))
