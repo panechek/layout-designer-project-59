@@ -4,6 +4,9 @@ install:
 lint:
 	npx stylelint ./app/scss/**/*.scss
 
+lint-fix:
+	npx stylelint ./app/scss/**/*.scss --fix
+
 deploy:
 	npx gulp build
 	npx surge build --domain pan-chat.surge.sh
