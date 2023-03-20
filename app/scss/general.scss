@@ -4,7 +4,6 @@
 @import "./bootstrap.scss";
 @import "./utilites/color-utilite.scss";
 
-@import "./components/header.scss";
 @import "./components/contacts.scss";
 @import "fonts";
 
@@ -87,6 +86,6 @@ p {
     border-radius: 50px;
 }
 
-
-
-
+.menu {
+    height: 72px;
+}
