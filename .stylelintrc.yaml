@@ -5,7 +5,6 @@ extends:
 plugins:
   - stylelint-scss
   - stylelint-order
-  - stylelint-config-rational-order/plugin
 
 rules:
   declaration-empty-line-before: null
