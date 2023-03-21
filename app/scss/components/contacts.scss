@@ -5,14 +5,13 @@
 
     overflow-x: hidden;
     overflow-y: auto;
-  }
-  
+  }  
   &::-webkit-scrollbar {
     display: none;
   }
 }
 
-.hide_scroll {
+.hide-scroll {
   @include hide-scrollbar;
 }
 
