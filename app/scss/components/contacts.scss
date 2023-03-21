@@ -1,21 +1,21 @@
 @mixin hide-scrollbar() {
-    & {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
+  & {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
-      overflow-x: hidden;
-      overflow-y: auto;
-    }
-  
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    overflow-x: hidden;
+    overflow-y: auto;
   }
+  
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
 
 .hide_scroll {
-    @include hide-scrollbar;
+  @include hide-scrollbar;
 }
 
 .contact {
-    box-shadow: 0 0.125rem 0.25rem rgba(0 0 0 / 7.5%);
+  box-shadow: 0 0.125rem 0.25rem rgba(0 0 0 / 7.5%);
 }

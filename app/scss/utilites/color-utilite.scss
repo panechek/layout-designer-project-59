@@ -1,11 +1,11 @@
 @import '../variables';
 
 @mixin color($color-name, $color-value) {
-    .#{$color-name} {
-        color: #{$color-value};
-    }
+  .#{$color-name} {
+    color: #{$color-value};
+  }
 }
 
 @each $color, $value in $theme-colors {
-    @include color($color, $value);
+  @include color($color, $value);
 }
